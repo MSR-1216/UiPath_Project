@@ -1,0 +1,134 @@
+﻿{
+  "Metadata": {
+    "Id": "5510bccd-d2db-4572-8baa-c5cacecc926e",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "SaveForm",
+    "Width": 700,
+    "Height": 450,
+    "Theme": "Flatly",
+    "ShowInTaskbar": true,
+    "ShowMargin": false,
+    "CustomStyle": "\"C:\\Users\\mshaf\\OneDrive\\Documents\\customcss.txt\""
+  },
+  "Data": {
+    "components": [
+      {
+        "html": "<h4><i><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></i><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FILE SAVING</strong></h4>",
+        "label": "Content",
+        "refreshOnChange": false,
+        "key": "content",
+        "type": "content",
+        "input": false,
+        "tableView": false
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": "File Name",
+                "placeholder": "Enter the file name to be saved.",
+                "tableView": true,
+                "validate": {
+                  "required": true
+                },
+                "key": "FileName",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "label": "HTML",
+                "attrs": [
+                  {
+                    "attr": "",
+                    "value": ""
+                  }
+                ],
+                "content": "note: file will be named as given above.",
+                "refreshOnChange": false,
+                "key": "html",
+                "type": "htmlelement",
+                "input": false,
+                "tableView": false
+              }
+            ],
+            "width": 6,
+            "offset": 0,
+            "push": 0,
+            "pull": 0,
+            "size": "sm",
+            "currentWidth": 6
+          },
+          {
+            "components": [],
+            "width": 6,
+            "offset": 0,
+            "push": 0,
+            "pull": 0,
+            "size": "md",
+            "currentWidth": 6
+          }
+        ],
+        "key": "columns1",
+        "type": "columns",
+        "input": false,
+        "tableView": false,
+        "label": "Columns"
+      },
+      {
+        "label": "space",
+        "key": "space",
+        "type": "hidden",
+        "input": true,
+        "tableView": false
+      },
+      {
+        "label": "Table",
+        "cellAlignment": "center",
+        "key": "table",
+        "type": "table",
+        "input": false,
+        "tableView": false,
+        "rows": [
+          [
+            {
+              "components": [
+                {
+                  "label": "Save the file",
+                  "action": "event",
+                  "showValidations": false,
+                  "tableView": false,
+                  "key": "saveTheFile",
+                  "conditional": {
+                    "show": false,
+                    "when": "FileName"
+                  },
+                  "type": "button",
+                  "input": true
+                }
+              ]
+            },
+            {
+              "components": [
+                {
+                  "label": "No Thanks",
+                  "action": "event",
+                  "showValidations": false,
+                  "theme": "warning",
+                  "tableView": false,
+                  "key": "noThanks",
+                  "type": "button",
+                  "input": true
+                }
+              ]
+            }
+          ]
+        ],
+        "numRows": 1,
+        "numCols": 2
+      }
+    ]
+  }
+}
